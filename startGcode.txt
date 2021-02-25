@@ -1,0 +1,37 @@
+M107
+M190 S60 ; set bed temperature and wait for it to be reached
+M104 S190 ; set temperature
+;TYPE:Custom
+G28 ;HOME
+;SET_GCODE_OFFSET Z=-0.45
+
+M109 S190 ; set temperature and wait for it to be reached
+G21 ; set units to millimeters
+G90 ; use absolute coordinates
+M82 ; use absolute distances for extrusion
+G92 E0
+G1 Z5 F2000
+G1 X0 Y0
+G1 Z0.3
+G92 E0
+G1 E10 F100
+G92 E0
+G1 X1 F1000
+G4 S1
+G1 X2 F100
+G4 S1
+G1 X3 F3000
+G4 S1
+G1 X5 F100
+G4 S1
+G1 X7 F3000
+G92 E0
+G90
+;LAYER_CHANGE
+;Z:0.3
+;HEIGHT:0.3
+G1 Z0.300 F15000.000
+G1 E-1.00000 F4800.000
+G92 E0
+G1 E1.00000 F4800.000
+M106 S255 ;fan on full speed
