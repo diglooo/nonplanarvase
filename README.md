@@ -1,2 +1,2 @@
 # nonplanarvase
-matlab script to generare a non planar gcode
+matlab script to generate a non planar gcode
